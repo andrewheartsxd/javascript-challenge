@@ -7,7 +7,7 @@ function library() {
       for (x = 0; x < this.shelves[i].books.length; x++) {
         console.log(this.shelves[i].books[x].title);
       }
-    }
+    };
   }
 }
 
@@ -54,7 +54,7 @@ function book(title, author, category) {
     var merged = publicLibrary.shelves[checkedIn[0].category].books.concat(checkedIn);
     publicLibrary.shelves[checkedIn[0].category].books = merged;
 
-  }
+  };
 }
 
 //Creates Shelf object that contains books. Has a function to report a book's position on the shelf, used to check in and check out books
@@ -73,7 +73,7 @@ function shelf() {
     for (i = 0; i < this.books.length; i++) {
     console.log(this.books[i].title);
     }
-  }
+  };
 }
 
 //Function to add a new book to the library shelf
@@ -117,7 +117,7 @@ $(document).on('click', 'li', function() {
   else {
     publicLibrary.shelves[parentClass].books[ind].checkin(parentClass, ind);
   }
-})
+});
 
 //Event listener to add new books
 $("#addButton").click(function(){
@@ -149,23 +149,23 @@ $("#addButton").click(function(){
 //Event Listeners for Listing Shelf or Library Contents to Console
 $("#reportFiction").click(function(){
   publicLibrary.shelves[0].reportContents();
-})
+});
 
 $("#reportNonFiction").click(function(){
   publicLibrary.shelves[1].reportContents();
-})
+});
 
 $("#reportBiography").click(function(){
   publicLibrary.shelves[2].reportContents();
-})
+});
 
 $("#reportCheckedOut").click(function(){
   publicLibrary.shelves[3].reportContents();
-})
+});
 
 $("#reportLibrary").click(function(){
   publicLibrary.reportContents();
-})
+});
 
 
 
