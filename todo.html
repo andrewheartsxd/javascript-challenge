@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo List</title>
+    <style>
+
+      body {
+        background-color: #000;
+      }
+
+      .form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        background-color: #C2C2BC;
+        border-radius: 10px;
+        padding-left: 1em;
+      }
+
+      .todo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        background-color: #C2C2BC;
+        border-radius: 10px;
+        padding-left: 1em;
+      }
+
+      .item {
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        background-color: #C2C2BC;
+        list-style-type: none;
+        border-radius: 10px;
+        padding-left: 1em;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="form">
+      <form>
+        <p>Add a new item to your ToDo list!</p>
+        <input id="todo" type="text" placeholder="New ToDo"> <span><input type="button" id="addButton" class="add" value="Add"></span>
+      </form>
+
+      <p>Click on completed items to clear them off your ToDo list!</p>
+    </div>
+
+    <div class="todo">
+      <h3>ToDo List</h3>
+    </div>
+
+    <div>
+      <ul class="todolist"></ul>
+    </div>
+
+  </body>
+
+  <footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script>
+    //event listener that adds input values to list
+      $("#addButton").click(function(){
+        var newItem = $("#todo").val();
+        $(".todolist").append('<li class="item">' + newItem + '</li>');
+      })
+
+    //event listener that removes input values from list
+      $(document).on('click', 'li', function() {
+        $(this).remove();
+      })
+    </script>
+  </footer>
+</html>
