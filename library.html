@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Public Library</title>
+  </head>
+
+  <body>
+    <img src="http://www.thelivingmoon.com/43ancients/04images/Alexandria/Alexandria-CosmosReconstruction1.jpg">
+
+    <div>
+      <form>
+        <p>Add a book to the library shelves!</p>
+        <input id="title" type="text" placeholder="Title">
+        <input id="author" type="text" placeholder="Author">
+        <select id="category">
+          <option value="" disabled selected>Category</option>
+          <option value="0">Fiction</option>
+          <option value="1">Non-fiction</option>
+          <option value="2">Biography</option>
+        </select>
+      </form>
+      <br>
+      <input type="button" id="addButton" class="add" value="Add">
+      <input type="button" id="reportLibrary" value="List Entire Library to Console">
+    </div>
+
+    <div class="fiction">
+      <h3>Fiction Shelf</h3>
+      <ul class="fiction"></ul>
+      <input type="button" id="reportFiction" value="List Books to Console">
+    </div>
+
+    <div class="non-fiction">
+      <h3>Non-fiction Shelf</h3>
+      <ul class="non-fiction"></ul>
+      <input type="button" id="reportNonFiction" value="List Books to Console">
+    </div>
+
+    <div class="biography">
+      <h3>Biography Shelf</h3>
+      <ul class="biography"></ul>
+      <input type="button" id="reportBiography" value="List Books to Console">
+    </div>
+
+    <div class="checked-out">
+      <h3>Checked Out</h3>
+      <ul class="checked-out"></ul>
+      <input type="button" id="reportCheckedOut" value="List Books to Console">
+    </div>
+
+  </body>
+
+  <footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script src="library.js"></script>
+  </footer>
+</html>
