@@ -7,8 +7,8 @@ function library() {
       for (x = 0; x < this.shelves[i].books.length; x++) {
         console.log(this.shelves[i].books[x].title);
       }
-    };
-  }
+    }
+  };
 }
 
 //Creates Book object with title, author, and category properties. Has methods to add new books to shelf, check out, and check in
